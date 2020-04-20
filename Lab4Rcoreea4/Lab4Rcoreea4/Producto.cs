@@ -8,7 +8,7 @@ namespace Lab4Rcoreea4
     {
         private string name;
         private int id;
-         public Producto(string name,int id)
+         public Producto(string name,int id) 
         {
             this.Name = name;
             this.Id = id;
