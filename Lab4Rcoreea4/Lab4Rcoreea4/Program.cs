@@ -33,7 +33,16 @@ namespace Lab4Rcoreea4
                     
                     if (maquinas[i].memoria<=0)
                     {
-                        maquinas[i].reiniciar();
+                        Console.WriteLine("Ha habido un problema con la maquina" + maquinas[i].name);
+                        string opcion;
+                        Console.WriteLine("si quiere reinciar ingrese 1, sino presione cualquier boton");
+                        opcion = Console.ReadLine();
+                        if (opcion == "1")
+                        {
+                            maquinas[i].reiniciar();
+
+                        }
+                       
                     }
                     i += 1;
                     

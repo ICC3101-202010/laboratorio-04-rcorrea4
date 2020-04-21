@@ -6,7 +6,7 @@ namespace Lab4Rcoreea4
 {
     class recepcion:maquina
     {
-        private string name;
+        
         private int id;
         
         private int estado;

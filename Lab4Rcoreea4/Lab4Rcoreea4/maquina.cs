@@ -7,6 +7,7 @@ namespace Lab4Rcoreea4
     public abstract class maquina
     {
         public int memoria;
+        public string name;
         abstract public void encender();
         abstract public void apagar();
         abstract public void reiniciar();

@@ -6,7 +6,7 @@ namespace Lab4Rcoreea4
 {
     class Empaque:maquina
     {
-        private string name;
+      
         private int estado;
         private int id;
 
