@@ -7,7 +7,6 @@ namespace Lab4Rcoreea4
     class Empaque:maquina
     {
         private string name;
-        private int memoria;
         private int estado;
         private int id;
 
@@ -26,18 +25,25 @@ namespace Lab4Rcoreea4
 
         public override void apagar()
         {
-            Console.WriteLine("Empaque" + Id + "apagada");
+            Console.WriteLine("Empaque" + Id + " apagada");
             Estado = 0;
         }
         public override void encender()
         {
-            Console.WriteLine("Empaque" + Id + "encendida");
+            Console.WriteLine("Empaque" + Id + " encendida");
             Estado = 1;
+            memoria = 20;
         }
         public override void reiniciar()
         {
-            Console.WriteLine("Empaque" + Id + "encendida");
+            Console.WriteLine("Empaque" + Id + " reiniciada");
             Estado = 1;
+            memoria = 20;
+        }
+        public override void MMemoria()
+        {
+            Random rnd = new Random();
+            memoria -= rnd.Next(4);
         }
     }
 

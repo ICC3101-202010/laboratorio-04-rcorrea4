@@ -8,7 +8,7 @@ namespace Lab4Rcoreea4
     {
         private string name;
         private int id;
-        private int memoria;
+        
         private int estado;
 
         public string Name { get => name; set => name = value; }
@@ -27,19 +27,27 @@ namespace Lab4Rcoreea4
        
         public override void encender()
         {
-            Console.WriteLine("Recepcion"+id+"encendida");
+            Console.WriteLine("Recepcion"+id+" encendida");
             Estado = 1;
             
         }
         public override void apagar()
         {
-            Console.WriteLine("Recepcion"+id+"Apagada");
+            Console.WriteLine("Recepcion"+id+" Apagada");
             Estado = 0;
+            memoria = 20;
         }
         public override void reiniciar()
         {
-            Console.WriteLine("Recepcion"+id+"Reiniciada");
+            Console.WriteLine("Recepcion"+id+" Reiniciada");
             Estado = 1;
+            memoria = 20;
         }
+        public override void MMemoria()
+        {
+            Random rnd = new Random();
+            memoria -= rnd.Next(4);
+        }
+        
     }
 }

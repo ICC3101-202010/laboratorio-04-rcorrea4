@@ -7,7 +7,7 @@ namespace Lab4Rcoreea4
     class Ensamblaje:maquina
     {
         private string name;
-        private int memoria;
+        
         private int estado;
         private int id;
 
@@ -26,18 +26,25 @@ namespace Lab4Rcoreea4
 
         public override void apagar()
         {
-            Console.WriteLine("Ensamblaje" + Id + "apagada");
+            Console.WriteLine("Ensamblaje" + Id + " apagada");
             Estado = 0;
         }
         public override void encender()
         {
-            Console.WriteLine("Ensamblaje" + Id + "encendida");
+            Console.WriteLine("Ensamblaje" + Id + " encendida");
             Estado = 1;
+            memoria = 20;
         }
         public override void reiniciar()
         {
-            Console.WriteLine("Ensamblaje" + Id + "reiniciada");
+            Console.WriteLine("Ensamblaje" + Id + " reiniciada");
             Estado = 1;
+            memoria = 20;
+        }
+        public override void MMemoria()
+        {
+            Random rnd = new Random();
+            memoria -= rnd.Next(4);
         }
     }
 

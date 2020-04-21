@@ -7,7 +7,7 @@ namespace Lab4Rcoreea4
     class almacenamiento:maquina
     {
         private string name;
-        private int memoria;
+       
         private int estado;
         private int id;
 
@@ -26,18 +26,25 @@ namespace Lab4Rcoreea4
 
         public override void apagar()
         {
-            Console.WriteLine("Almacenamiento" + Id + "apagada");
+            Console.WriteLine("Almacenamiento" + Id + " apagada");
             Estado = 0;
         }
         public override void encender()
         {
-            Console.WriteLine("Almacenamiento" + Id + "encendida");
+            Console.WriteLine("Almacenamiento" + Id + " encendida");
             Estado = 1;
+            memoria = 20;
         }
         public override void reiniciar()
         {
-            Console.WriteLine("Almacenamiento" + Id + "reiniciada");
+            Console.WriteLine("Almacenamiento" + Id + " reiniciada");
             Estado = 0;
+            memoria = 20;
+        }
+        public override void MMemoria()
+        {
+            Random rnd = new Random();
+            memoria -= rnd.Next(4);
         }
     }   
     

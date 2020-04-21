@@ -7,7 +7,7 @@ namespace Lab4Rcoreea4
     class Verificar:maquina
     {
         private string name;
-        private int memoria;
+        
         private int estado;
         private int id;
 
@@ -26,19 +26,26 @@ namespace Lab4Rcoreea4
 
         public override void apagar()
         {
-            Console.WriteLine("Verificar" + Id + "apagada");
+            Console.WriteLine("Verificar" + Id + " apagada");
             Estado = 0;
 
         }
         public override void encender()
         {
-            Console.WriteLine("Verificar" + Id + "prendida");
+            Console.WriteLine("Verificar" + Id + " encendida");
             Estado = 1;
+            memoria = 20;
         }
         public override void reiniciar()
         {
-            Console.WriteLine("Verificar" + Id + "reiniciada");
+            Console.WriteLine("Verificar" + Id + " reiniciada");
             Estado = 1;
+            memoria = 20;
+        }
+        public override void MMemoria()
+        {
+            Random rnd = new Random();
+            memoria -= rnd.Next(4);
         }
     }
 
